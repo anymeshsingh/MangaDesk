@@ -1,0 +1,34 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px auto;
+    
+    .managlist{
+      background-color: #eee;
+      height: 100vh;
+      // width: 300px;
+      overflow-x: hidden;
+      // overflow-y: hidden;
+      overflow: auto;
+  
+      .manga{
+        padding: 10px 10px;
+        border-bottom: 1px rgb(192, 192, 192) solid;
+  
+        .titlecontainer{
+          height: 100%;
+          width: 100%;
+          cursor: default;
+        }
+      }
+      .manga:hover{
+        background-color: white;
+      }
+    }
+    .mangadetails{
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }

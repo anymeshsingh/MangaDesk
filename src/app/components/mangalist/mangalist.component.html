@@ -1,3 +1,22 @@
-<p>
-  mangalist works!
-</p>
+<div class="container">
+  <div class="managlist">
+      <!-- <input type="text" (keyup.enter)="searchManga($event.target.value)"> -->
+      <div class="manga" *ngFor="let manga of mangaList.manga" >
+        <div class="titlecontainer" (click)="showMangaDetails(manga.i)">
+          <strong>{{ manga.t }}</strong>
+        </div>
+      </div>
+  </div>
+  <div class="mangadetail">
+    <div *ngIf="currentMangaDetails">
+      <strong>Title: {{ mangaDetails.title }}</strong> <br>
+      <span>Chapters: {{ mangaDetails.chapters_len }}</span> <br>
+      <span>Author: {{ mangaDetails.author }}</span> <br>
+      <!-- <img [src]="getImageUrl(mangaDetails.image)"> -->
+      <img *ngIf="mangaDetails.image" src="https://cdn.mangaeden.com/mangasimg/{{mangaDetails.image}}" alt="Image Not Loaded" />
+      <img *ngIf="!mangaDetails.image && mangaDetails.imageURL" src="https://cdn.mangaeden.com/mangasimg/{{mangaDetails.imageURL}}" />
+      <br>
+      <em>{{mangaDetails.description}}</em>
+    </div> 
+  </div> 
+</div>

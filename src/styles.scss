@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
+
+// @font-face {
+//     font-family: 'Rustico-Regular';
+//     src: url('assets/fonts/Rustico-Regular.eot');
+//     src: url('assets/fonts/Rustico-Regular.woff2') format('woff2'),
+//          url('assets/fonts/Rustico-Regular.woff') format('woff'),
+//          url('assets/fonts/Rustico-Regular.ttf') format('truetype'),
+//          url('assets/fonts/Rustico-Regular.svg#Rustico-Regular') format('svg'),
+//          url('assets/fonts/Rustico-Regular.eot?#iefix') format('embedded-opentype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MangaService } from '../../services/manga.service';
 
 @Component({
   selector: 'app-mangalist',
@@ -7,9 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MangalistComponent implements OnInit {
 
-  constructor() { }
+  mangaList: any;
+  mangaDetails: any;
+  currentMangaDetails = false;
+
+  constructor(private manga: MangaService) { }
 
   ngOnInit() {
+    this.fetchMangaList();
+  }
+  fetchMangaList(){
+    this.manga.getAllManga().subscribe(mangaList=>{
+      console.log(mangaList);
+      this.mangaList = mangaList;
+    });
   }
 
+  getImageUrl(url){
+    this.manga.getThumbnailUrl(url);
+  }
+
+  showMangaDetails(id){
+    this.manga.getMangaDetails(id).subscribe(mangaDetails =>{
+      console.log(mangaDetails);
+      this.mangaDetails = mangaDetails;
+      this.currentMangaDetails = true;
+    })
+  }
+
+  searchManga(name){
+    this.mangaList = null;
+    console.log(name);
+  }
 }
