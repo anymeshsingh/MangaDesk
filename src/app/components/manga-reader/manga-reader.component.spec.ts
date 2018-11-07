@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FavouriteMangaComponent } from './favourite-manga.component';
+import { MangaReaderComponent } from './manga-reader.component';
 
-describe('FavouriteMangaComponent', () => {
-  let component: FavouriteMangaComponent;
-  let fixture: ComponentFixture<FavouriteMangaComponent>;
+describe('MangaReaderComponent', () => {
+  let component: MangaReaderComponent;
+  let fixture: ComponentFixture<MangaReaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FavouriteMangaComponent ]
+      declarations: [ MangaReaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FavouriteMangaComponent);
+    fixture = TestBed.createComponent(MangaReaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

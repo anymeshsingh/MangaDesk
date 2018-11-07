@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MangalistComponent } from './components/mangalist/mangalist.component';
-import { SearchMangaComponent } from './components/search-manga/search-manga.component';
-import { FavouriteMangaComponent } from './components/favourite-manga/favourite-manga.component';
+import { MangaReaderComponent } from './components/manga-reader/manga-reader.component';
 
 const routes: Routes = [
   {
@@ -10,12 +9,12 @@ const routes: Routes = [
     component: MangalistComponent
   },
   {
-    path: "search",
-    component: SearchMangaComponent
+    path: "mangareader",
+    component: MangaReaderComponent
   },
   {
-    path: "favourite",
-    component: FavouriteMangaComponent
+    path: "**",
+    component: MangalistComponent
   }
 ];
 

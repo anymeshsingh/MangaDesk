@@ -1,22 +1,33 @@
-<div class="container">
+<div class="mangalist-container">
   <div class="managlist">
-      <!-- <input type="text" (keyup.enter)="searchManga($event.target.value)"> -->
-      <div class="manga" *ngFor="let manga of mangaList.manga" >
-        <div class="titlecontainer" (click)="showMangaDetails(manga.i)">
-          <strong>{{ manga.t }}</strong>
-        </div>
+    <input type="text" class="searchbox" placeholder="Search Manga Here" (keyup)="searchManga($event.target.value)">
+    <div class="manga" *ngFor="let manga of mangaList.manga" >
+      <div class="titlecontainer" (click)="showMangaDetails(manga.i)">
+        <strong>{{ manga.t }}</strong>
       </div>
+    </div>
   </div>
-  <div class="mangadetail">
-    <div *ngIf="currentMangaDetails">
-      <strong>Title: {{ mangaDetails.title }}</strong> <br>
-      <span>Chapters: {{ mangaDetails.chapters_len }}</span> <br>
-      <span>Author: {{ mangaDetails.author }}</span> <br>
-      <!-- <img [src]="getImageUrl(mangaDetails.image)"> -->
-      <img *ngIf="mangaDetails.image" src="https://cdn.mangaeden.com/mangasimg/{{mangaDetails.image}}" alt="Image Not Loaded" />
-      <img *ngIf="!mangaDetails.image && mangaDetails.imageURL" src="https://cdn.mangaeden.com/mangasimg/{{mangaDetails.imageURL}}" />
-      <br>
-      <em>{{mangaDetails.description}}</em>
-    </div> 
+  <div class="manga-details">
+    <div *ngIf="currentMangaDetails" class="manga-detail-container">
+      <figure class="manga-image">
+          <img class="manga-thumbnail" *ngIf="mangaDetails.image" [src]="getImageUrl(mangaDetails.image)" alt="Image not available!">
+          <img class="manga-thumbnail"  *ngIf="!mangaDetails.image && mangaDetails.imageURL" src="{{mangaDetails.imageURL}}"/>
+      </figure>
+      <div class="manga-description">
+          <strong>Title: {{ mangaDetails.title }}</strong> <br>
+          <span>Chapters: {{ mangaDetails.chapters_len }}</span> <br>
+          <span>Author: {{ mangaDetails.author }}</span> <br>
+          <span *ngIf="mangaDetails.released">Released: {{ mangaDetails.released }}</span> <br>
+          <br>
+          Categories: <span *ngFor="let categorie of mangaDetails.categories" class="categorie">{{categorie}} </span>
+          <br>
+          <br>
+          Description:<br>
+          <em>{{mangaDetails.description}}</em>
+          <br><br>
+          <a class="read-manga-btn" routerLink="mangareader">Read Manga</a>
+      </div>
+    </div>
+    <div class="before-manga-selected" *ngIf="!currentMangaDetails"><em>Select a manga from the list or search for a Manga in the search box.</em></div> 
   </div> 
 </div>
