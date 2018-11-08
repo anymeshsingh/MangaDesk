@@ -19,13 +19,18 @@
         border: 0;
         padding: 10px;
         margin-top: -40px;
-        font-size: 1.02em;
+        font-size: 1.05em;
         background-color: white;
         box-shadow: -3px 2px 5px rgba(70, 70, 70, 0.459);
         text-align: center;
         text-decoration: none;
         color: black;
         cursor: default;
+
+        .arrow-icon{
+            font-family: sans-serif;
+
+        }
       }
 
       .chapter{
@@ -68,7 +73,8 @@
             button{
                 border: 0;
                 background-color: lightblue;
-                font-size: 1.2em;
+                font-size: 1em;
+                font-family: sans-serif;
             }
             button:focus{
                 outline: none;

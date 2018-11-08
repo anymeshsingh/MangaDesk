@@ -20,7 +20,7 @@ export class MangaReaderComponent implements OnInit {
   ngOnInit() {
     this.chapterlistArray = this.manga.currentMangaDetails.chapters;
     this.chapterNumber = this.chapterlistArray[this.chapterlistArray.length-1][0];
-    this.showChapterPages(this.chapterlistArray[this.chapterNumber][3], this.chapterNumber);
+    this.showChapterPages(this.chapterlistArray[this.chapterlistArray.length-1][3], this.chapterNumber);
     
   }
 
@@ -34,7 +34,7 @@ export class MangaReaderComponent implements OnInit {
         this.currentChapterPagesArray[count] = this.chapterPages.images[i];
         count++;
       }
-      this.currentPageUrl = this.getImageUrl(this.currentChapterPagesArray[0][1]);
+      this.currentPageUrl = this.getImageUrl(this.currentChapterPagesArray[this.pageNumber][1]);
     })
   }
 

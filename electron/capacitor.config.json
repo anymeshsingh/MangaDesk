@@ -1,0 +1,6 @@
+{
+  "appId": "io.gitlab.anymeshsingh.mangadesk",
+  "appName": "MangaDesk",
+  "bundledWebRuntime": false,
+  "webDir": "dist/mangadesk"
+}

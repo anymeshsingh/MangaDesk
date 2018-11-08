@@ -1,6 +1,13 @@
-<div class="mangalist-container">
+<div class="loading-screen" *ngIf="!mangaList">
+  <figure>
+    <img src="assets/images/mangadesk.svg" class="logo">
+    <figcaption>Fetching Manga list from the internet. Please wait...</figcaption>
+  </figure>
+</div>
+
+<div class="mangalist-container" *ngIf="mangaList">
   <div class="managlist">
-    <input type="text" class="searchbox" placeholder="Search Manga Here" (keyup)="searchManga($event.target.value)">
+    <input type="text" [disabled]="!mangaList.total" class="searchbox" placeholder="Search Manga Here" (keyup)="searchManga($event.target.value)">
     <div class="manga" *ngFor="let manga of mangaList.manga" >
       <div class="titlecontainer" (click)="showMangaDetails(manga.i)">
         <strong>{{ manga.t }}</strong>

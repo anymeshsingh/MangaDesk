@@ -46,8 +46,8 @@ export class MangaService {
   }
 
   fetchChapterPages(chapterId){
-    console.log(chapterId)
-    console.log(this.mangaChapterPagesUrl+chapterId)
+    // console.log(chapterId)
+    // console.log(this.mangaChapterPagesUrl+chapterId)
     return this.http.get(this.mangaChapterPagesUrl+chapterId)
       .pipe(
         map((res) => {

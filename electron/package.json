@@ -1,0 +1,22 @@
+{
+  "name": "MangaDesk",
+  "version": "0.1.0",
+  "description": "Manga reader cross-platform app for desktop.",
+  "main": "index.js",
+  "scripts": {
+    "electron:start": "electron ./"
+  },
+  "dependencies": {
+    "@capacitor/electron": "^1.0.0-alpha.28",
+    "electron-is-dev": "^0.3.0"
+  },
+  "devDependencies": {
+    "electron": "^1.8.2"
+  },
+  "keywords": [
+    "capacitor",
+    "electron"
+  ],
+  "author": "Animesh Singh",
+  "license": "ISC"
+}

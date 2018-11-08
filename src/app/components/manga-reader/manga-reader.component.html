@@ -1,6 +1,6 @@
 <div class="manga-reader-container">
     <div class="chapter-list">
-        <a class="back-btn" routerLink="">&#9664;Go Back</a>
+        <a class="back-btn" routerLink=""><span class="arrow-icon">&#9664;</span>Go Back</a>
         <div class="chapter" *ngFor="let chapter of chapterlistArray">
           <div class="titlecontainer" (click)="showChapterPages(chapter[3], chapter[0])">
             <strong>{{chapter[0]}}</strong><em *ngIf="chapter[2]">: {{chapter[2]}}</em>
