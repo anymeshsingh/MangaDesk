@@ -12,10 +12,8 @@ Mangadesk is a cross-platform desktop application built with Capacitor, Electron
 
 #### Download
 - [Windows](https://github.com/anymeshsingh/MangaDesk/releases/download/0.1.0-alpha/MangaDesk-win32-ia32.zip)
-- [macOS]
-(https://github.com/anymeshsingh/MangaDesk/releases/download/0.1.0-alpha/MangaDesk-darwin-x64.zip)
-- [Linux]
-(https://github.com/anymeshsingh/MangaDesk/releases/download/0.1.0-alpha/MangaDesk-linux-x64.zip)
+- [macOS](https://github.com/anymeshsingh/MangaDesk/releases/download/0.1.0-alpha/MangaDesk-darwin-x64.zip)
+- [Linux](https://github.com/anymeshsingh/MangaDesk/releases/download/0.1.0-alpha/MangaDesk-linux-x64.zip)
 
 #### Webite
 - [MangaDesk](https://anymeshsingh.github.io/MangaDesk)
